@@ -8,6 +8,7 @@ class Model {
         $query->execute();
         $doctors = $query->fetchAll(PDO::FETCH_OBJ);
 
+
         return $doctors;
     }
 }

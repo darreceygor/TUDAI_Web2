@@ -6,9 +6,9 @@ class View {
 
     }
 
-    function showTasks($doctors){
+    function showDoctors($doctors){
         
-        $html = '<!DOCTYPE html>
+        echo '<!DOCTYPE html>
         <html lang="en">
         <head>
             <base href="'.BASE_URL.'" />
@@ -23,18 +23,23 @@ class View {
             <h1>Listado de Doctores</h1>
         
             <ul>';
+            
+            echo '<pre>';
+            var_dump($doctors); 
+            echo '</pre>';
+            echo'<br>';
+            
+            foreach($doctors as $doctor) {
+                '<li>'. $doctor->name .': '.$doctor->surname .' - '.'</li>';
+            }
     
-        foreach($doctors as $doctor) {
-                $html.= '<li>'. $doctor->name.': '.$doctor->surname .' - '.'</li>';
-       }
-    
-        $html .=   '
+        '
             </ul>
          
               
         </body>
         </html>';
     
-        echo $html;
+    
     }
 }
