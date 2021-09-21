@@ -6,20 +6,25 @@ class View {
 
     }
 
+
+
+    function home(){
+
+        include './templates/header.php';
+        include './templates/nav.php';
+
+        echo '    
+        <h1>HOME</h1>
+        ';
+        include './templates/footer.php';
+    } 
+
+
     function showDoctors($doctors){
         
-        echo '<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <base href="'.BASE_URL.'" />
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-            <title>Listado</title>
-        </head>
-        <body>
-            
+        include './templates/header.php';
+        include './templates/nav.php';
+        echo '    
             <h1>Listado de Doctores</h1>
         
                 <table class="table">
@@ -41,24 +46,24 @@ class View {
                     <td>'.$doctor->surname .'</td>
                     <td>'.$doctor->dr_office .'</td>
                     <td>'.$doctor->direction .'</td>
-                </tr>';
-                    
+                    </tr>';
                 }
+                echo '
                 
-'
                 </tbody>
-            </table>
-
-
-
-
-
- 
-         
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        </body>
-        </html>';
-    
-    
+            </table>';
+            include './templates/footer.php';
     }
+
+
+    function about(){
+
+    include './templates/header.php';
+    include './templates/nav.php';
+
+    echo '    
+    <h1>ABOUT</h1>
+    ';
+    include './templates/footer.php';
+    } 
 }
