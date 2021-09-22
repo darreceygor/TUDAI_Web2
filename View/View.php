@@ -17,8 +17,31 @@ class View {
         <h1>HOME</h1>
         ';
         include './templates/footer.php';
-    } 
+    }
+    
 
+    function showSpecialities($specialities){
+        
+        include './templates/header.php';
+        include './templates/nav.php';
+        echo '    
+            <h1>Listado de Especialidades</h1>
+        
+            <form method="POST" id="formSpecialities">
+                <select name="speciality">';
+                    foreach($specialities as $speciality) {
+                        echo '
+                            <option value="'.$speciality->ID.'">'.$speciality->speciality.'</option>';
+                    };
+                echo '
+                </select>
+                <button type="submit">Consultar</button>
+            </form>
+            <div id="container">
+            </div>';
+            
+        include './templates/footer.php';
+    }
 
     function showDoctors($doctors){
         

@@ -19,13 +19,20 @@ class Controller {
 
     }
 
+    function showList(){
 
+        $specialities = $this->model->getSpecialities();
+
+        $this->view->showSpecialities($specialities);
+    }
+
+/*
     function showList(){
 
         $doctors = $this->model->getDoctors();
 
         $this->view->showDoctors($doctors);
-    }
+    }*/
 
     function showAbout(){
 
