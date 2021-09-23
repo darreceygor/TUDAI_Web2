@@ -10,6 +10,7 @@
         <a class="nav-link" href="list">Dr's List</a>
         <a class="nav-link" href="about">About</a>
         <a class="nav-link disabled">Contact Us</a>
+        <a class="nav-link" href="admin">Administrator</a>
       </div>
     </div>
   </div>

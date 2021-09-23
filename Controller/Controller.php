@@ -21,22 +21,25 @@ class Controller {
 
     function showList(){
 
+        $doctors = $this->model->getDoctors();
         $specialities = $this->model->getSpecialities();
 
-        $this->view->showSpecialities($specialities);
+        $this->view->showDoctors($doctors,$specialities);
     }
-
-/*
-    function showList(){
-
-        $doctors = $this->model->getDoctors();
-
-        $this->view->showDoctors($doctors);
-    }*/
 
     function showAbout(){
 
         $this->view->about();
 
-    }
+    } 
+
+    function showAdmin(){
+
+        $doctors = $this->model->getDoctors();
+        $this->view->admin($doctors);
+
+    } 
+
+
+
 }

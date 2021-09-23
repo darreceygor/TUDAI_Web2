@@ -25,12 +25,15 @@ switch ($params[0]) {
     case 'list': 
         $Controller->showList(); 
         break;
-    case 'about':
+     case 'about':
         $Controller->showAbout();
-        break;
+        break; 
     /*case 'contact':
         $Controller->showContact();
         break;     */
+    case 'admin':
+        $Controller->showAdmin();
+        break;
     default: 
         echo('404 Page not found'); 
         break;
