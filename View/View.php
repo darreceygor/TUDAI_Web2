@@ -81,7 +81,7 @@ class View {
                 <tr>';
 
                 //ver listado general de medicos
-                if ($_POST['speciality'] === '1') {
+                if ($_POST['speciality'] == '') {
                     foreach($doctors as $doctor) {
                         echo '<th scope="row">'.$doctor->ID_doctors.'</th>
                         <td>'.$doctor->speciality.'</td> 
@@ -96,7 +96,7 @@ class View {
 
                     //filtra listado por especialidad
                     foreach($doctors as $doctor) {
-                        if ($_POST['speciality'] === $doctor->ID_specialities){
+                        if ($_POST['speciality'] == $doctor->ID_specialities){
                             echo '<th scope="row">'.$doctor->ID_doctors.'</th>
                             <td>'.$doctor->speciality.'</td> 
                             <td>'.$doctor->name .'</td>
