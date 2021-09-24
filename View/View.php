@@ -81,7 +81,7 @@ class View {
                 <tr>';
 
                 //ver listado general de medicos
-                if ($_POST['speciality'] == '') {
+                if (empty($_POST['speciality'])) {
                     foreach($doctors as $doctor) {
                         echo '<th scope="row">'.$doctor->ID_doctors.'</th>
                         <td>'.$doctor->speciality.'</td> 
